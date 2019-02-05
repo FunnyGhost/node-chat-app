@@ -2,7 +2,7 @@ const expect = require('expect');
 const { generateMessage, generateLocationMessage } = require('./message');
 
 describe('generateMessage', () => {
-  it('should generate the correct message object', () => {
+  test('should generate the correct message object', () => {
     const fromToUse = 'Catalin';
     const textToUse = 'Ola senor!';
     const result = generateMessage(fromToUse, textToUse);
@@ -14,10 +14,10 @@ describe('generateMessage', () => {
 });
 
 describe('generateLocationMessage', () => {
-  it('should generate the correct location message object', () => {
+  test('should generate the correct location message object', () => {
     const fromToUse = 'Catalin';
     const latToUse = 34;
-    const lngToUse = 45;
+    const lngToUse = 49;
     const expectedUrl = `https://www.google.com/maps?q=${latToUse},${lngToUse}`;
     const result = generateLocationMessage(fromToUse, latToUse, lngToUse);
 
